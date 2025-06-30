@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #10ae92;
+  overflow-x: hidden;
+  border: 3px solid;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  color: rgb(223, 19, 19);
+  font-size: 50px;
+    border: 1px solid;
+ 
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 50px 60px;
+  text-decoration: none;
+  color: #693d0f;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+    border: 3px solid;
+
+}
+
+nav a:hover {
+  background-color: #290c30;
+  color: #e1e80b;
+}
+
+
+section {
+  display: none;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+section.active {
+  display: block;
+}
+
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* === Landing Page Styling === */
+.landing-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.landing-page h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.landing-page p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.landing-page button {
+  background-color: white;
+  color: #007BFF;
+  font-size: 1.1em;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.landing-page button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* === Transitions === */
+.fade-out {
+  animation: fadeOutLanding 0.8s ease-in-out forwards;
+}
+
+.fade-in {
+  animation: fadeInMain 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInMain {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutLanding {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-30px); }
+}
